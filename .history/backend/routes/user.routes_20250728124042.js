@@ -1,0 +1,11 @@
+//import express module
+const express = require("express");
+//call the router method from express to create the router
+const router = express.router();
+
+//import the addUser Controler
+const userController = require("../controllers/addUserController");
+
+//creat a router to handle the add employee request on post
+router.post("/api/addUser", addUserControllers.createUser);
+module.exports = router;
