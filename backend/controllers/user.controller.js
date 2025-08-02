@@ -44,6 +44,24 @@ async function createUser(req, res, next) {
   }
 }
 
+
+
+async function getAllUsers(req, res, next) {
+
+const user = await userService.getAllUsers();
+console.log(user)
+if (!user) {
+  res.status(400).json({
+    error: "faild to get all employees!",
+  });
+} else {
+  res.status(200).json({
+    status: "success",
+    data: user,
+  });
+}
+}
 module.exports = {
   createUser,
+  getAllUsers,
 };

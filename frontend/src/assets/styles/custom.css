@@ -270,3 +270,18 @@ input:disabled {
   width: auto; /* Maintain aspect ratio */
   display: block; /* Ensure the logo is displayed */
 }
+
+.menubar {
+  position: sticky;
+  top: 10px; /* Stick the menu 10px from the top */
+  height: calc(100vh - 10px); /* Full height minus the top offset */
+  overflow-y: auto; /* Enable scrolling if content exceeds the height */
+  z-index: 100; /* Keep it above other content */
+}
+
+.menubarr {
+  margin-top: -585px;
+
+  margin-left: 300px; /* Leave space for AdminMenu */
+  padding: 20px; /* Add some padding for aesthetics */
+}

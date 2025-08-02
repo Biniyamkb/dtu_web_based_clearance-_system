@@ -10,26 +10,29 @@ function AdminMenu(props) {
         <a href="/admin" className="list-group-item">
           Dashboard
         </a>
-        <a href="/admin/user" className="list-group-item">
-          users
-        </a>
-        <a href="/admin/report" className="list-group-item">
-          New Report
+        <a href="/admin/users" className="list-group-item">
+          list of Users
         </a>
         <a href="/admin/add-user" className="list-group-item">
           Add User
         </a>
+        <a href="/admin/user" className="list-group-item">
+          users
+        </a>
+
+        <a href="/admin/report" className="list-group-item">
+          New Report
+        </a>
+
         <a href="/admin/stafs" className="list-group-item">
           Stafs
         </a>
-        <a href="/admin/add-stundent" className="list-group-item">
-          Add Studnets
-        </a>
+
         <a href="/admin/requests" className="list-group-item">
           requests
         </a>
-        <Link to="/studnets" className="list-group-item">
-          students list
+        <Link to="/admin/add-user" className="list-group-item">
+          for future
         </Link>
       </div>
     </div>

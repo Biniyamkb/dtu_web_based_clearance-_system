@@ -8,4 +8,5 @@ const userController = require("../controllers/user.controller");
 
 //creat a router to handle the add user request on post
 router.post("/api/addUser", userController.createUser);
+router.get("/api/addUser", userController.getAllUsers);
 module.exports = router;

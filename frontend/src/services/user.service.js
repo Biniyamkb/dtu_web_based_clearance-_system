@@ -4,7 +4,6 @@ const api_url = process.env.REACT_APP_API_URL;
 
 //function to send post request to create a new user
 const createUser = async (formData) => {
- 
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -15,7 +14,20 @@ const createUser = async (formData) => {
   return response;
 };
 
+const getAllUser = async (token) => {
+  const requestOptions = {
+    method: "GET",
+    header: {
+      "Contenet-Type": "application/json",
+      "x-access-token": token,
+    },
+  };
+  const response = await fetch(`${api_url}/api/addUser`, requestOptions);
+  return response;
+};
+
 const userServicess = {
   createUser,
+  getAllUser,
 };
 export default userServicess;

@@ -50,22 +50,26 @@ async function createUser(user) {
 }
 
 // a function to get user by email
-
 async function getUserByEmail(user_email) {
-
   const query = `
     SELECT * FROM users
     WHERE email = ?`;
 
   const [rows] = await conn.query(query, [user_email]);
-
-
   return rows;
+}
 
+// a function to get all Employees
+async function getAllUsers() {
+  const query =
+    "SELECT user_id ,first_name, father_name, email, phone_number, role, created_at FROM users ORDER BY user_id";
+  const rows = await conn.query(query);
+  return rows;
 }
 
 module.exports = {
   checkIfUserExists,
   createUser,
   getUserByEmail,
+  getAllUsers,
 };
